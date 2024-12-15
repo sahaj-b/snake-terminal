@@ -39,9 +39,9 @@ void gameOverScreen() {
 void printSnake() {
   for (int i = 0; i < snakePos.size(); i++) {
     if (i == snakePos.size() - 1) {
-      mvprintw(snakePos[i].second, snakePos[i].first, "\033[92m@\033[0m");
+      mvaddch(snakePos[i].second, snakePos[i].first, '@');
     } else {
-      mvprintw(snakePos[i].second, snakePos[i].first, "\033[32m#\033[0m");
+      mvaddch(snakePos[i].second, snakePos[i].first, '#');
     }
   }
 }
